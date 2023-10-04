@@ -1,0 +1,8 @@
+{
+    "data":{
+        "name":"xixi",
+        "age":23,
+        "url":"https://pic35.photophoto.cn/20150511/0034034892281415_b.jpg",
+        "desc":"Vue 中的多行注释快捷键是 ctrl + / 或者 cmd + /。 你也可以使用 /* 和 */ 进行多行注释"
+    }
+}

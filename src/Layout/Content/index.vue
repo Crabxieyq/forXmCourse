@@ -92,7 +92,7 @@ const list =[
 
 // 使用字面量接收 带默认值
 withDefaults(defineProps<{
-    numtoContent:Number,
+    numtoContent:number,
     arr:number[]
 }>(),{
     numtoContent:66,

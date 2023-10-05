@@ -11,7 +11,15 @@ import { createApp } from 'vue'
 import App from './App.vue'
 
 import slotCom from './components/DynamicComponent/Dialog/index.vue'
-
-createApp(App).component('slotCom',slotCom).mount('#app')
+import mitt from 'mitt'
+const Mit = mitt()
+const app = createApp(App)
+declare module 'vue'{
+    export interface ComponentCustomProperties{
+        $Bus:typeof Mit
+    }
+}
+app.config.globalProperties.$Bus = Mit
+app.component('slotCom',slotCom).mount('#app')
 // createApp(App).component('slotCom',slotCom)
 // createApp(App).mount('#app')

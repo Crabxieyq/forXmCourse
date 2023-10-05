@@ -3,6 +3,7 @@
     <div class="xi-content">
         <!-- <div class="xi-content__items" v-for="item in numtoContent"> {{ item }} </div> -->
         <Button @click="send">给父组件传值</Button>
+        <Button @click="sendByBus">用Bus给兄弟组件传值</Button>
         <!-- <waterfall :list="list"></waterfall> -->
         <!-- <slotCom></slotCom> -->
 
@@ -14,6 +15,7 @@
 import { ref,reactive } from "vue"
 import waterfall from '../../components/waterfall.vue'
 import DynamicComp from "../../components/DynamicComponent/index.vue";
+import Bus from '../../bus'
 // 给父组件传值defineEmits 写法一
 // const emit = defineEmits(['on-click'])
 
@@ -23,6 +25,10 @@ const emit = defineEmits<{
 }>()
 const send = () => {
     emit('on-click','xxxxx')
+}
+let toBro = ref<string>("content组件中通过Bus传过来的内容")
+const sendByBus = () => {
+Bus.emit('toHeader',toBro)
 }
 
 // 子组件可以暴露值或者方法 父组件中可以通过ref直接读取

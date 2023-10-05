@@ -9,11 +9,17 @@
 <template>
     <div class="xi-header">
         Header
+        {{ fromBro }}
     </div>
 </template>
 
 <script setup lang="ts">
 import {ref, reactive} from 'vue'
+import Bus from '../../bus'
+let fromBro = ref<string>('')
+Bus.on('toHeader',(toBro:string) => {
+    fromBro.value = toBro
+})
 </script>
 <style scoped lang="scss">
 @include b(header){

@@ -18,7 +18,8 @@
 </template>
 
 <script setup lang="ts">
-import {ref, reactive,shallowRef,markRaw} from 'vue'
+// 使用了unplugin-auto-import/vite插件 会自动引入ref, reactive,shallowRef,markRaw等 不再需要手动引入
+// import {ref, reactive,shallowRef,markRaw} from 'vue'
 import AVue from "./A.vue";
 import BVue from "./B.vue";
 import CVue from "./C.vue";

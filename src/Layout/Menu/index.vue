@@ -9,23 +9,23 @@
 <template>
     <div class="xi-menu">
         Menu
-{{ toMenuMethods }}
+        {{ toMenuMethods }}
     </div>
 </template>
 
 <script setup lang="ts">
-import {ref, reactive} from 'vue'
+import { ref, reactive } from 'vue'
 import { getCurrentInstance } from 'vue';
 const instance = getCurrentInstance()
 let toMenuMethods = ref<string>('')
-instance?.proxy?.$Bus.on("toMenu", (methods:any) => {
+instance?.proxy?.$Bus.on("toMenu", (methods: any) => {
     toMenuMethods.value = methods
 })
 </script>
 <style scoped lang="scss">
-@include b(menu){
-    min-width:200px;
-    border-right:1px solid #ccc;
-    height:100%;
+@include b(menu) {
+    min-width: 200px;
+    border-right: 1px solid #ccc;
+    height: 100%;
 }
 </style>

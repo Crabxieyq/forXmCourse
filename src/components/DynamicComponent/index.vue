@@ -25,6 +25,7 @@ import BVue from "./B.vue";
 import CVue from "./C.vue";
 import Provide from './Provide/index.vue'
 import txsVue from './TSX/index'
+import vModel from './vModel/index.vue'
 // shallowRef作用：深层数据并不会进行监听，只会对第一层数据进行双向绑定  避免性能浪费。这里的组件信息不用全部遍历对象的所有属性，使所有属性都具备响应性
 const defaultCom = shallowRef(AVue)
 const active = ref(0)
@@ -52,6 +53,10 @@ const data = reactive([
     {
         name:'TSX',
         com:markRaw(txsVue)
+    },
+    {
+        name:'vModel',
+        com:markRaw(vModel)
     },
 ])
 

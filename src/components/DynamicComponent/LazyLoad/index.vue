@@ -4,7 +4,7 @@
  * @Author: yanqing.Xie
  * @Date: 2023-10-07 14:38:36
  * @LastEditors: yanqing.Xie
- * @LastEditTime: 2023-10-07 15:27:42
+ * @LastEditTime: 2023-10-07 15:30:08
 -->
 <template>
     <div class="xi-lazyLoad">
@@ -36,7 +36,7 @@ let vLazy: Directive<HTMLElement, string> = async (el, binding) => {
     el.src = def.default
     // 当当前img元素展示在可视区内时，将图片替换掉
     // 怎么判断一个元素是否在可视区内？
-    // js的api可以监控
+    // js的IntersectionObserver api可以监控
     const observer = new IntersectionObserver((entries) => {
         // 如果 intersectionRatio 为 0，则目标在视野外，
         // intersectionRatio大于0,说明当前元素在可视区内，为1说明当前元素全在可视区内。

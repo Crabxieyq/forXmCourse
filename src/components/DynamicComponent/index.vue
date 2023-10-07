@@ -4,7 +4,7 @@
  * @Author: yanqing.Xie
  * @Date: 2023-10-04 17:55:31
  * @LastEditors: yanqing.Xie
- * @LastEditTime: 2023-10-07 14:50:57
+ * @LastEditTime: 2023-10-07 16:05:39
 -->
 
 <template>
@@ -27,14 +27,19 @@ import Provide from './Provide/index.vue'
 import txsVue from './TSX/index'
 import vModel from './vModel/index.vue'
 import LazyLoad from './LazyLoad/index.vue'
+import AboutHook from './AboutHooks/index.vue'
 // shallowRef作用：深层数据并不会进行监听，只会对第一层数据进行双向绑定  避免性能浪费。这里的组件信息不用全部遍历对象的所有属性，使所有属性都具备响应性
 const defaultCom = shallowRef(AVue)
 const active = ref(0)
-const switchCom = (item,index) => {
+type comType = {
+    name:string,
+    com:any
+}
+const switchCom = (item:comType,index:number) => {
     defaultCom.value = item.com
     active.value = index
 }
-const data = reactive([
+const data = reactive<comType[]>([
     {
         name:'异步组件',
         com:markRaw(AVue)
@@ -62,6 +67,10 @@ const data = reactive([
     {
         name:'图片懒加载',
         com:markRaw(LazyLoad)
+    },
+    {
+        name:'自定义hooks',
+        com:markRaw(AboutHook)
     },
 ])
 

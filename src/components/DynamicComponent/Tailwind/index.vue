@@ -20,8 +20,13 @@
                     ideas
                     you can use to find your first customers.</p>
             </div>
+            
         </div>
+        
     </div>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold  px-4 rounded m-auto max-w-sm">
+                Click me
+            </button>
 </template>
 <script setup lang="ts">
 

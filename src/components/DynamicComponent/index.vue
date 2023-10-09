@@ -4,12 +4,12 @@
  * @Author: yanqing.Xie
  * @Date: 2023-10-04 17:55:31
  * @LastEditors: yanqing.Xie
- * @LastEditTime: 2023-10-09 14:17:56
+ * @LastEditTime: 2023-10-09 16:04:19
 -->
 
 <template>
     <div class="xi-dynamic">
-        <div v-for="(item,index) in data" class="xi-dynamic__items" :class="[active == index ? 'active' : '']" @click="switchCom(item,index)">
+        <div v-for="(item,index) in data" class="xi-dynamic__items hover:bg-blue-300" :class="[active == index ? 'active' : '']" @click="switchCom(item,index)">
             <div>{{ item.name }}</div>
         </div>
     </div>

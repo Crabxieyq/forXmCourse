@@ -4,7 +4,7 @@
  * @Author: yanqing.Xie
  * @Date: 2023-10-07 13:09:43
  * @LastEditors: yanqing.Xie
- * @LastEditTime: 2023-10-09 10:43:39
+ * @LastEditTime: 2023-10-09 11:24:00
  */
 /*
  * @Descripttion: 
@@ -20,7 +20,7 @@ import App from './App.vue'
 
 import slotCom from './components/DynamicComponent/Dialog/index.vue'
 import mitt from 'mitt'
-
+import './index.css'
 // 引入自定义插件
 import Loading from './components/Loading'
 const Mit = mitt()

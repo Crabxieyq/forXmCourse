@@ -16,6 +16,13 @@ import { ref,reactive } from "vue"
 import waterfall from '../../components/waterfall.vue'
 import DynamicComp from "../../components/DynamicComponent/index.vue";
 import Bus from '../../bus'
+
+// 使用自定义插件Loading功能
+const instance = getCurrentInstance()
+instance?.proxy?.$loading.show()
+setTimeout(()=>{
+  instance?.proxy?.$loading.hide()
+},5000)
 // 给父组件传值defineEmits 写法一
 // const emit = defineEmits(['on-click'])
 

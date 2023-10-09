@@ -4,7 +4,7 @@
  * @Author: yanqing.Xie
  * @Date: 2023-10-07 15:52:42
  * @LastEditors: yanqing.Xie
- * @LastEditTime: 2023-10-07 16:24:38
+ * @LastEditTime: 2023-10-09 10:24:23
  */
 
 // 自定义hook实际上是一个函数
@@ -13,7 +13,7 @@ type Options = {
     el: string
 }
 export default function name(Options: Options):Promise<{baseUrl:string}>{
-    return new Promise<void>((resolve, reject) => {
+    return new Promise((resolve) => {
         onMounted(() => {
             let img: HTMLImageElement = document.querySelector(Options.el) as HTMLImageElement
             // 图片加载完了开始解析 否则会导致解析错误

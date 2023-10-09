@@ -4,7 +4,7 @@
  * @Author: yanqing.Xie
  * @Date: 2023-10-07 16:35:45
  * @LastEditors: yanqing.Xie
- * @LastEditTime: 2023-10-07 16:41:50
+ * @LastEditTime: 2023-10-09 10:27:24
  */
 import { App, defineComponent, onMounted } from 'vue'
 // ResizeObserver侦听元素宽高变化
@@ -22,7 +22,7 @@ function useResize(el: HTMLElement, callback: (cr: DOMRectReadOnly,resize:Resize
 //  这里的install相当于app.use
  
 const install = (app: App) => {
-    app.directive('resize', {//自定义指令
+    app.directive('resize', {//自定义指令 插件加入
         mounted(el, binding) {
             useResize(el, binding.value)
         }

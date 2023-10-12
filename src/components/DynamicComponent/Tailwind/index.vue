@@ -20,15 +20,21 @@
                     ideas
                     you can use to find your first customers.</p>
             </div>
-            
+
         </div>
-        
+
     </div>
     <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold  px-4 rounded m-auto max-w-sm">
-                Click me
-            </button>
+        Click me
+    </button>
 </template>
 <script setup lang="ts">
+import {typeOf} from '../../../utils/judgeType.ts'
+console.log(typeOf([]));
+console.log(typeOf(null));
+console.log(typeOf(undefined));
+console.log(typeOf({}));
+
 
 
 </script>

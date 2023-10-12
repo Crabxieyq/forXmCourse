@@ -4,7 +4,7 @@
  * @Author: yanqing.Xie
  * @Date: 2023-10-07 14:38:36
  * @LastEditors: yanqing.Xie
- * @LastEditTime: 2023-10-07 16:27:15
+ * @LastEditTime: 2023-10-11 10:34:31
 -->
 <template>
     <div >
@@ -17,8 +17,8 @@
 import useBase64 from "../../../hooks/index";
 useBase64({
     el:'#img'
-}).then((res) => {
-    console.log(res.baseUrl);
+}).then(() => {
+    // console.log(res.baseUrl);
     
 })
 </script>

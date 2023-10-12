@@ -1,12 +1,11 @@
 
-import Loading from '.';
 <!--
  * @Descripttion: 
  * @version: 
  * @Author: yanqing.Xie
  * @Date: 2023-10-09 09:37:11
  * @LastEditors: yanqing.Xie
- * @LastEditTime: 2023-10-09 10:52:51
+ * @LastEditTime: 2023-10-11 10:35:16
 -->
 
 
@@ -37,7 +36,7 @@ defineExpose({
 .loading{
     position:fixed;
     inset:0;
-    background:rgba(197, 143, 143, 0.8);
+    background:rgba(37, 31, 31, 0.8);
     display:flex;
     justify-content:center;
     align-items:center;

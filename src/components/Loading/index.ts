@@ -10,8 +10,8 @@ export default{
         render(vNode,document.body)
         // Vue提供的全局配置，因为不再像Vue2那样有原型 protoType 而是app.config.globalProperties
         app.config.globalProperties.$loading = {
-            show:() => vNode.component?.exposed?.show(),
-            hide:() => vNode.component?.exposed?.hide()
+            show:() => vNode.component?.exposed?.show,
+            hide:() => vNode.component?.exposed?.hide
         }
     }
 }

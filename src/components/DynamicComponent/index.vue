@@ -4,7 +4,7 @@
  * @Author: yanqing.Xie
  * @Date: 2023-10-04 17:55:31
  * @LastEditors: yanqing.Xie
- * @LastEditTime: 2023-10-09 16:04:19
+ * @LastEditTime: 2023-10-19 13:38:02
 -->
 
 <template>
@@ -29,7 +29,7 @@ import vModel from './vModel/index.vue'
 import LazyLoad from './LazyLoad/index.vue'
 import AboutHook from './AboutHooks/index.vue'
 import Tailwind from './Tailwind/index.vue'
-
+import hFunction from './hFunction/index.vue'
 // shallowRef作用：深层数据并不会进行监听，只会对第一层数据进行双向绑定  避免性能浪费。这里的组件信息不用全部遍历对象的所有属性，使所有属性都具备响应性
 const defaultCom = shallowRef(AVue)
 const active = ref(0)
@@ -77,6 +77,10 @@ const data = reactive<comType[]>([
     {
         name:'Tailwind',
         com:markRaw(Tailwind)
+    },
+    {
+        name:'h函数',
+        com:markRaw(hFunction)
     },
 ])
 
